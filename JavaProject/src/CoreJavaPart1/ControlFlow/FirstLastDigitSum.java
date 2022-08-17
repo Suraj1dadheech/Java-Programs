@@ -8,7 +8,10 @@ public class FirstLastDigitSum {
             return 0;
         int l=number%10;
         int digits = (int)Math.log10(number);
-		number = (int)(number / (int)(Math.pow(10, digits)));
+        
+        System.out.println(number+" no: "+digits);
+		
+        number = (int)(number / (int)(Math.pow(10, digits)));
 		return number+l;
     }
 	public static void main(String[] args) {
@@ -21,3 +24,5 @@ public class FirstLastDigitSum {
 	}
 
 }
+
+//       2=(int)2.22/100;

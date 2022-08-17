@@ -7,7 +7,7 @@ public class GreatestCommonDivisor {
             int gcd=1;
         for(int i = 1; i <= first && i <= second; i++)  
         {  
-            if(first%i==0 && second%i == 0)  
+            if(first%i == 0 && second%i == 0)  
             gcd = i;  
         }  
         return gcd;

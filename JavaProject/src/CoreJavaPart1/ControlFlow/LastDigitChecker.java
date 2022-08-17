@@ -2,16 +2,16 @@ package CoreJavaPart1.ControlFlow;
 
 public class LastDigitChecker {
 	public static boolean hasSameLastDigit(int a,int b, int c){
-        if((a>9 && a<=1000) && (b>9 && b<=1000) && (b>9 && b<=1000)){
+        if((a > 9 && a <= 1000) && (b > 9 && b <= 1000) && (b > 9 && b <= 1000)){
             if((a%10 == b%10) || (b%10 == c%10) || (c%10 == a%10))
                 return true;
-                return false;
+            return false;
         }
         else
             return false;
     }
     public static boolean isValid(int a){
-        if(a>9 && a<=1000)
+        if(a > 9 && a <= 1000)
             return true;
         return false;
     }

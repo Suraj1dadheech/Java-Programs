@@ -1,4 +1,4 @@
-package CoreJavaPart1.ConstructorAndInheritance;
+package CoreJavaPart1.ConstructorAndInheritance.CarpetCost;
 
 public class Carpet {
     private double cost;

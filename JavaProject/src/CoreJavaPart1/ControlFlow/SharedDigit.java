@@ -2,10 +2,11 @@ package CoreJavaPart1.ControlFlow;
 
 public class SharedDigit {
 	public static boolean hasSharedDigit(int a, int b){
-        if((a>9 && a<100) && (b>9 && b<100)){
-            String A=String.valueOf(a);
-            String B=String.valueOf(b);
-            // int size=(A.length>B.length?A.length)
+		
+        if((a > 9 && a < 100) && (b > 9 && b < 100)){
+            String A = String.valueOf(a);
+            String B = String.valueOf(b);
+           
             for(int i=0;i<A.length();i++){
                 for(int j=0;j<B.length();j++){
                     if(A.charAt(i)==B.charAt(j))

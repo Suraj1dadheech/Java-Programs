@@ -21,14 +21,14 @@ public class LargestPrime {
 				number/=i;
 			}
 		}
-		if(number>2)
+//		if(number>2)
 			fact= number;
 		
 		return fact;
 	
     }
 	public static void main(String[] args) {
-		System.out.println(getLargestPrime(217));
+		System.out.println(getLargestPrime(287));
 
 	}
 

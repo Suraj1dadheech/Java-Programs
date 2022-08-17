@@ -13,12 +13,13 @@ public class Theatre {
     private List<Seat> seats = new ArrayList<>();
     static final Comparator<Seat> PRICE_ORDER=new Comparator<Seat>() {
     	public int compare(Seat seat1, Seat seat2) {
-    		if(seat1.getPrice() < seat2.getPrice())
-    			return -1;
-    		else if(seat1.getPrice() < seat2.getPrice())
-    			return 1;
-    		else
-    			return 0;    			
+    		return (int)seat1.price-(int)seat2.price;
+//    		if(seat1.getPrice() < seat2.getPrice())
+//    			return -1;
+//    		else if(seat1.getPrice() < seat2.getPrice())
+//    			return 1;
+//    		else
+//    			return 0;    			
     	}
     	
     };
