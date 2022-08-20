@@ -78,16 +78,17 @@ public class Main {
 		System.out.println("--------Planets-------");
 		for(HeavenlyBody planet:planets)
 			System.out.println(planet.getName());
-		
-
+//		
+//
 		HeavenlyBody body=solarSystem.get("Earth");
 		System.out.println("-------------Moons of "+body.getName()+"-----------------");
-		for(HeavenlyBody jupiterMoon:body.getSatellites())
-			System.out.println(jupiterMoon.getName());
+		for(HeavenlyBody Moon:body.getSatellites())
+			System.out.println(Moon.getName());
 		
 		Set<HeavenlyBody> moons=new HashSet<>();
 		for(HeavenlyBody moon:planets)
 				moons.addAll(moon.getSatellites());
+//		
 		
 		System.out.println("------------All Moons--------------");
 		for(HeavenlyBody moon:moons)
