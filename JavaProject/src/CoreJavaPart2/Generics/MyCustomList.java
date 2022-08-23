@@ -1,4 +1,4 @@
-package CoreJavaPart3.Generics;
+package CoreJavaPart2.Generics;
 
 import java.util.ArrayList;
 

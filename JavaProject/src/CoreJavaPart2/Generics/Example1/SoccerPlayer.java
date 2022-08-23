@@ -1,4 +1,4 @@
-package CoreJavaPart3.Generics.Example;
+package CoreJavaPart2.Generics.Example1;
 
 public class SoccerPlayer extends Player {
 
