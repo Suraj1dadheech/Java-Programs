@@ -1,36 +1,50 @@
 package CoreJavaPart3.Collections.ComparableAndComparator.Comparator;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class Main{
-	public static void main(String args[]) {
-	ArrayList<User> list=new ArrayList<>();
-	list.add(new User("Suraj",21,"02:03:1999"));
-	list.add(new User("Rajesh",12,"27:08:1995"));
-	list.add(new User("Mahesh",18,"15:04:1993"));
-	list.add(new User("Kiran",8,"13:08:1995"));
-	list.add(new User("Sneha",16,"03:08:1995"));
+	public static int DobCalculator(String s) {
+		LocalDate dob = LocalDate.parse(s); 
+		
+		LocalDate curDate = LocalDate.now();
+		return Period.between(dob, curDate).getYears(); 
+	}
 	
-	//Comparing using AGE.
+	public static void main(String args[])throws Exception {
+	ArrayList<User> list=new ArrayList<>();
+	String s1="1999-03-02";
+	String s2="1995-08-27";
+	String s3="1993-04-15";
+	String s4="1995-08-13";
+	String s5="1995-08-03";
+
+    list.add(new User("Suraj",DobCalculator(s1),s1));
+	list.add(new User("Rajesh",DobCalculator(s1),s2));
+	list.add(new User("Mahesh",DobCalculator(s1),s3));
+	list.add(new User("Kiran",DobCalculator(s1),s4));
+	list.add(new User("Sneha",DobCalculator(s1),s5));
+	
+//	//Comparing using AGE.
 	Collections.sort(list,new AgeComparator());
 	System.out.println("Compare with Age:");
 	System.out.println(list);
-	
-	//Comparing Using Name.
+//	
+//	//Comparing Using Name.
 	Collections.sort(list,User.NAMECOMP);
 	System.out.println("Compare with Name Using anonymous object:");
 	System.out.println(list);
-	
-	//Comparing Using Name.
+//	
+//	//Comparing Using Name.
 	Collections.sort(list,new NameComparator());
 	System.out.println("Compare with Name:");
 	System.out.println(list);
-	
-	//Comparing Using DOB.
+//	
+//	//Comparing Using DOB.
 	Collections.sort(list,new DobComparator());
 	System.out.println("Compare with DOB:");
 	System.out.println(list);
-	
 	}
 }

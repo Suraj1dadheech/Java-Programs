@@ -1,4 +1,4 @@
-package CoreJavaPart2.CompAndEncAndPoly.Composite;
+package CoreJavaPart2.CompAndEncAndPoly.Composite.Challenge1;
 
 public class Lamp {
 	    private String style;
