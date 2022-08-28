@@ -35,27 +35,29 @@ interface UpperConcat{
 	public  String upperAndConcat(String s1,String s2);
 }
 
-//class AnotherClass{
-//	public String doSomething() {
-//		final int i=0;
-//		{
-//		UpperConcat uc=new UpperConcat() 
-//		{
-//			@Override
-//			public String upperAndConcat(String s1, String s2) 
-//			{
-//				System.out.println(i);
-//				return s1.toUpperCase()+s2.toUpperCase();
-//			}
-//		};
-//		
-//		System.out.println(i);
-//		
-//		return Main.doStringStuff(uc, "String-1 ", "String-2");
-//		}
-//	}
-//}
-//
+class AnotherClass{
+	public String doSomething() {
+		final int i=10;
+		UpperConcat uc=new UpperConcat() 
+		{
+			int a=0;
+			@Override
+			public String upperAndConcat(String s1, String s2) 
+			{
+				a++;
+//				i++;
+				System.out.println(i+"  "+a);
+				return s1.toUpperCase()+s2.toUpperCase();
+			}
+		};
+		
+		System.out.println(i);
+		
+		return Main.doStringStuff(uc, "String-1 ", "String-2");
+
+	}
+}
+
 
 
 

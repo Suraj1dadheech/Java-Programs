@@ -4,6 +4,10 @@ package CoreJavaPart3.LambdaExpressions;
 interface InterSum{
 	public int sum(int a, int b);
 }
+@FunctionalInterface
+interface Interfun{
+	public void fun();
+}
 class Demo{
 	int a;
 	public Demo(int a) {
@@ -28,6 +32,10 @@ public class Example2 {
 				
 			}
 		});
+		final int a=10;
+//		Interfun f=
+//				(sum()->{System.out.println("This is function: "+a)}).fun();
+//		f.fun();
 	}
 
 }
