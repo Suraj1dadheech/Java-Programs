@@ -4,6 +4,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@FunctionalInterface 
+interface Demo{
+	public String[] fun(String str);
+}
 public class Main {
 
 	public static void main(String[] args) {
@@ -11,12 +15,17 @@ public class Main {
 		
 
 		
-		Runnable runnable1=()->{
-			String str="let's Split in the array";
+		Demo d=(str)->{
 			String part[]=str.split(" ");
-			
-			
+			return part;
 		};
+		
+		String[] arr=d.fun("i am suraj Dadheech");
+		
+		for(String value:arr)
+			System.out.println(value);
+		
+		
 				
 
 	}

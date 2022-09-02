@@ -1,5 +1,7 @@
 package coreJavaCode.CoreJavaPart3.RegularExpressions;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -71,7 +73,7 @@ public class Example {
 		
 		
 		System.out.println(newString);
-		System.out.println(newString.replaceAll("^abcDe{3}", "YY"));  //here we use Quantifier it indicates preceding charachter of quantifier should be matched with no.
+		System.out.println(newString.replaceAll("^abcDe{3}", "YY"));  //here we use Quantifier it indicates preceding character of quantifier should be matched with no.
 																	//then only executes ex. in newString abcDe{3} means it is accepting abcDeee 3 e's so that it selects
 																   //the whole value. which is abcDeee which is equal to  abcDe{3} 
 		
@@ -146,7 +148,7 @@ public class Example {
 		}
 		
 		
-		Matcher match3=Pattern.compile("t[?!t]").matcher("tstvtkt");  //this expression check t should no followed by v but if  t comes at  end then  it should  included
+		Matcher match3=Pattern.compile("t[?!v]").matcher("tstvtkt");  //this expression check t should no followed by v but if  t comes at  end then  it should  included
 		
 		count=0;
 		while(match3.find()) {
@@ -168,24 +170,7 @@ public class Example {
 		
 		System.out.println("44444-4444".matches("^\\d{5}-\\d{4}"));
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		Set<Integer> l=new HashSet<Integer>();
 	}
 
 }

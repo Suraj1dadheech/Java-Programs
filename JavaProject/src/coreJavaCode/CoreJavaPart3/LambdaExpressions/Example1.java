@@ -39,6 +39,7 @@ public class Example1 {
 		i2.fun();
 		i3.fun();
 
+
 		
 		//using lambda function for the parameter type
 		sumInter a1=(int a,int b)->{return a+b;};

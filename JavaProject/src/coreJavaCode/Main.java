@@ -1,14 +1,21 @@
 package coreJavaCode;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Collections.binarySearch(null, null);
+		String newString="abcDeeeF12hhabcDeeeiiiijkl99z";
+//		System.out.println(str.replaceAll("^abcD+","YY"));	
+		
+		System.out.println(newString.replaceAll("e+i*j", "Y"));	
+		
+		
+		System.out.println("Abbc".matches("^[A-z]+"));
+		
+		
+		Set<Integer> l=new TreeSet<>();
 
 }
 }

@@ -13,6 +13,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main{
+	public static String UpperConvert(String str) {
+		System.out.print(",intmethod: "+str);
+		return str.toUpperCase();
+	}
 	public static void main(String ars[])
 	{
 		
@@ -42,12 +46,13 @@ public class Main{
 		list									//we have normal list and returned to stream
 			.stream()							//passing the list in the stream returned to map
 			.map(String::toUpperCase)			//doing mapping where all the  stream elements which are of string type convert to uppercase and now stream containing uppercase list now returns to filter it uses the  apply method of function interface
+			.peek(System.out::println)
 			.filter((s)->s.startsWith("G"))		//elements in the list are filtered now using predicate interface test method which takes arguments and provide the boolean value returns to sorted method
 			.sorted()							//sort the stream which contains only filtered elements return to foreach loop to print
 			.forEach(System.out::println);		//it accepts the value using accept method which contain the argument  but return nothing so 
 												//chain has to end here so this last forEach method  is called  terminal operations which return nothing and End the chain of stream.
 	
-		
+	
 		System.out.println("**********************************Concat then find  distinct then print and then count*********************************");
 		Stream<String> ioNumberStream=Stream.of("I26","I17","I29","071");
 		Stream<String> inNumberStream=Stream.of("N40","N36","I26","I17","I29","071");
