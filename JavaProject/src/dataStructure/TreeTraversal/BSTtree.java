@@ -1,6 +1,10 @@
-package dataStructure.Tree;
+package dataStructure.TreeTraversal;
 
-public class BinarySearchTree {
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+public class BSTtree {
 	
 	Node root;
 	int count=0;
@@ -41,6 +45,24 @@ public class BinarySearchTree {
 			}	
 	}		
 }
+	
+
+	public List<Integer> BFSfun() {
+		Node currentNode=root;
+		Queue<Node> queue=new LinkedList<Node>();
+		List<Integer> list=new LinkedList<Integer>();
+		queue.add(currentNode);
+		while(queue.size()>0) {
+			currentNode=queue.remove();
+			list.add(currentNode.value);
+			if(currentNode.left!=null)
+				queue.add(currentNode.left);
+			if(currentNode.right!=null)
+				queue.add(currentNode.right);
+		}
+		return list;
+	}
+	
 
 	public void inorder(Node root) {
 		if(root==null)
@@ -59,7 +81,6 @@ public class BinarySearchTree {
 		preorder(root1.right);
 		
 	}
-	
 	public void postorder(Node root) {
 		if(root==null)
 			return;
@@ -69,18 +90,7 @@ public class BinarySearchTree {
 		
 	}
 
-	public boolean Contains(Node root,int value)
-	{
-		if(root==null)
-			return false;
-		if(root.value==value) 
-			return true;
-		if(root.left==null && root.right==null)
-			return false;
-		if(value<root.value) 
-			return Contains(root.left,value); 
-		return Contains(root.right,value);
-	}
+
 
 
 }

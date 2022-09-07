@@ -59,16 +59,16 @@ public class HashTable
 			return;
 		}else {
 			Node temp=dataMap[index];
-//			if(temp.key==key) {
-//				temp.value=value;
-//				return;
-//			}
+			if(temp.key==key) {
+				temp.value=value;
+				return;
+			}
 			while(temp.next!=null) {
 				temp=temp.next;
-//				if(temp.key==key) {
-//					temp.value=value;
-//					return;
-//				}
+				if(temp.key==key) {
+					temp.value=value;
+					return;
+				}
 			}
 			temp.next=newNode;
 			
