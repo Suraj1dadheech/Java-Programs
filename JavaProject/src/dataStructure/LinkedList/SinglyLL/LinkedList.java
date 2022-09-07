@@ -14,6 +14,8 @@ public class LinkedList
 		length=1;
 	}
 	
+	
+
 	class Node   // inner Node Class
 	{
 		int value;

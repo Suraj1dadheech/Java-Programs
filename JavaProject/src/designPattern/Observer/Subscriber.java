@@ -2,7 +2,7 @@ package designPattern.Observer;
 
 public class Subscriber implements ISubscriber {
 	private String name;
-	private Channel channel=new Channel();
+	private Channel channel;
 	
 	public Subscriber(String name) {
 		super();

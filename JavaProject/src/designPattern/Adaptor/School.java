@@ -6,13 +6,13 @@ public class School {
 		AssignmentWork aw=new AssignmentWork();
 		
 		
-		Pen p=new PenAdaptor();
+//		Pen p=new PenAdaptor();
+//		
+//
+//		aw.setP(p);
 		
-
-		aw.setP(p);
 		
-		
-		aw.writeAssignment("Java introduced in 1991");
+		aw.writeAssignment("I am writing java assignment");
 
 	}
 

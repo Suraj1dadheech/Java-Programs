@@ -1,31 +1,21 @@
 package dataStructure.SortingAlgos;
 
 public class BubbleSort {
-	int a,b;
-
 	private static void BubbleFun(int[] arr) {
 		int n=6;
 		for(int i=0;i<n;i++) {
 			for(int j=0;j<n-i-1;j++) {
 				if(arr[j]>arr[j+1]) {
-//					int temp=arr[j+1];
-//					arr[j+1]=arr[j];
-//					arr[j]=temp;
-					BubbleSort obj=new BubbleSort();
-					obj.a=arr[j];
-					obj.b=arr[j+1];
-					BubbleSort.swap(obj);
-					arr[j]=obj.a;
-					arr[j+1]=obj.b;
+					BubbleSort.swap(arr,j,j+1);
 				}
 			}
 		}	
 	}
 	
-	public static void swap(BubbleSort obj) {
-		int temp=obj.a;
-		obj.a=obj.b;
-		obj.b=temp;
+	public static void swap(int[] arr,int i,int j) {
+		int temp=arr[i];
+		arr[i]=arr[j];
+		arr[j]=temp;
 	}
 	
 	public static void main(String[] args) {

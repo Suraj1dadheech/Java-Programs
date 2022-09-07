@@ -9,8 +9,8 @@ public class Main {
 		System.out.println("*********************************");
 		
 		
-//		IFoodMaker vfoodMaker=new VoiceFoodMaker(foodMaker);
-//		System.out.println(vfoodMaker.Prepare("Soup"));
+		IFoodMaker vfoodMaker=new VoiceFoodMaker(foodMaker);
+		System.out.println(vfoodMaker.Prepare("Soup"));
 		
 	}
 
